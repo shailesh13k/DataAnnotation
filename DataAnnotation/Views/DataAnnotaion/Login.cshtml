@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<center>
+    Enter Usernmae:@Html.TextBox("t1", "")
+    <br />
+    Enter Password:@Html.Password("t1", "")
+    <br />
+    logis As:@Html.DropDownList("Roles","select your role")
+    <input type="submit" value="Login"/>
+</center>
+

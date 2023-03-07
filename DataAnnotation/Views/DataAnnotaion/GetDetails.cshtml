@@ -1,0 +1,50 @@
+﻿@model DataAnnotation.Models.Emp
+
+@{
+    ViewBag.Title = "GetDetails";
+}
+
+<h2>GetDetails</h2>
+
+<div>
+    <h4>Emp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.eid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dcode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "GetAllEmp")
+</p>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DataAnnotation.Models.Emp>
+
+@{
+    ViewBag.Title = "GetAllEmp";
+}
+
+<h2>GetAllEmp</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddNewEmp")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.eid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dcode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.eid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dcode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "UpdateEmpDetails", new { id=item.eid}) |
+            @Html.ActionLink("Details", "GetDetails", new { id=item.eid}) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
